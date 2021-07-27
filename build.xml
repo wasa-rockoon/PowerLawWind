@@ -1,0 +1,13 @@
+<project name="PowerLawWind" basedir="." default="build">
+
+    <property name="src.dir" value="${basedir}/src"/>
+    <property name="build.dir" value="${basedir}/build"/>
+
+
+    <target name="build">
+        <mkdir dir="${build.dir}"/>
+        <javac debug="true" srcdir="${src.dir}" destdir="${build.dir}" classpath="OpenRocket.jar" includeantruntime="false" source="1.7" target="1.7"/>
+    	<jar destfile="PowerLawWind.jar" basedir="${build.dir}"/>
+    </target>
+
+</project>
